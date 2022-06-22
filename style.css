@@ -15,7 +15,7 @@ main {
 .wrapper {
   background-image: url("../Ass4/Ass4 images/bg-intro-desktop.png");
   box-sizing: border-box;
-  width: 1440px;
+  max-width: 1440px;
   height: 90vh;
   background-color: hsl(0, 100%, 74%);
   padding: 110px;
@@ -37,11 +37,12 @@ main {
 }
 .section--2 {
   flex-basis: 50%;
+  max-width: 650px;
 }
 .form-message {
   margin-bottom: 20px;
   text-align: center;
-  width: 550px;
+  max-width: 100%;
   background-color: hsl(248, 32%, 49%);
   height: 50px;
   border-radius: 5px;
@@ -51,7 +52,7 @@ main {
 }
 .form {
   box-sizing: border-box;
-  width: 550px;
+  max-width: 550px;
   max-height: 500px;
   background-color: white;
   padding: 20px 40px;
@@ -105,17 +106,70 @@ form p a {
   border-color: hsl(0, 100%, 74%);
   color: hsl(0, 100%, 74%);
 }
+
 .error-div::after {
-  content: "jhuceiveuvbeieib";
-  font-size: 0.85em;
+  content: var(--afterError, "This field cannot be empty");
+  text-align: right;
+  font-size: var(--afterFont, 0.85em);
   color: hsl(0, 100%, 74%);
   display: block;
   margin: 5px 0;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 40rem) {
   .wrapper--content {
-    display: block;
-    background-color: black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  main {
+    width: 100%;
+  }
+  .wrapper {
+    width: 100%;
+    margin: 50px auto;
+    height: auto;
+    padding: 30px;
+  }
+
+  .s1--header {
+    margin: auto;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    height: 120px;
+    line-height: 45px;
+    font-size: 28px;
+  }
+
+  .section--1 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 50px auto;
+  }
+
+  .s1-body {
+    word-wrap: break-word;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    padding-top: 10px;
+    height: auto;
+    font-size: 19px;
+  }
+
+  .section--1 div {
+    width: 340px;
+    margin: auto;
+    text-align: center;
+  }
+  .form-message {
+    padding: 20px 70px;
+    height: auto;
+    line-height: 28px;
   }
 }
