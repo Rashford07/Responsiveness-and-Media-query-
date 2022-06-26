@@ -42,7 +42,7 @@ main {
 .form-message {
   margin-bottom: 20px;
   text-align: center;
-  max-width: 90%;
+  max-width: 95%;
   background-color: hsl(248, 32%, 49%);
   height: 50px;
   border-radius: 5px;
